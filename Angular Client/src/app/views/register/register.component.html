@@ -1,0 +1,20 @@
+<h1>Sign Up for a New Account</h1>
+<hr>
+<form action = "/register" method = "POST">
+    <div *ngIf="errorMessage !== ''" class = "alert alert-danger" role = "alert">
+        {{errorMessage}}
+    </div>
+    <div class = "form-group">
+        <label for  = "username"> Username</label>
+        <input name="username" [(ngModel)]="newUser.userId" type="text" class="form-control" id="username" placeholder="Username">
+        <label for  = "firstName"> First Name</label>
+        <input name="firstName" [(ngModel)]="newUser.firstName" type="text" class="form-control" id="firstName" placeholder="e.g. John">
+        <label for  = "lastName"> Last Name</label>
+        <input name="lastName" [(ngModel)]="newUser.lastName" type="text" class="form-control" id="lastName" placeholder="e.g. Smith">
+        <label for  = "email"> Email</label>
+        <input name="email" [(ngModel)]="newUser.emailAddress" type="email" class="form-control" id="email" placeholder="Email">
+        <label for  = "password"> Password</label>
+        <input name="password" [(ngModel)]="newUser.password" type="password" class="form-control" id="password" placeholder="Password">
+    </div>
+    <button type="submit" (click)="CreateNewUser()" class="btn btn-primary">Register</button>
+</form>

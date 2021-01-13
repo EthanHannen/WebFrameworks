@@ -1,0 +1,11 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav">
+        <li class="active"><a [routerLink] = "['/']">Home</a></li>
+        <li><a [routerLink] = "['/login']" *ngIf="this.currentUser === null">Login</a></li>
+        <li><a [routerLink] = "['/register']" *ngIf="this.currentUser === null">Register</a></li>
+        <li><a (click)="LogoutUser()" *ngIf="this.currentUser !== null">Logout</a></li>
+        <li><a [routerLink] = "['/chat']" *ngIf="this.currentUser !== null">Chat</a></li>
+      </ul>
+    </div>
+</nav>

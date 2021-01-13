@@ -1,0 +1,20 @@
+<div class = 'container'>
+    <div class='row posts-header'>
+        <div class="col-md-10">
+            <h1>Blog Posts</h1>
+        </div>
+        <div class="col-md-2">
+            <button class='btn btn-success' [routerLink]="['/post-new']" *ngIf="currentUser !== null">Create</button>
+        </div>
+    </div>
+    <div class='row'>
+        <div class='col-md-12' *ngIf="posts.length > 0">
+            <app-post-current
+            *ngFor="let post of posts"
+            [post]='post'
+            (ItemDeleted)='RemovePost($event)'
+            ></app-post-current>
+        </div>
+        <h2 *ngIf="posts.length == 0">No Posts Found</h2>
+    </div>
+</div>

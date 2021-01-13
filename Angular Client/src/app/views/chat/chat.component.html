@@ -1,0 +1,36 @@
+<div class="container-fluid">
+    <div class="container">
+        <h4>Frameworks Web Chat</h4>
+    </div>
+    <div class='row'>
+        <div class='col col-md-6'>
+            <span>
+                <p>You can monitor all activities within this module</p>
+            </span>
+        </div>
+    </div>
+    <div class='table-responsive'>
+        <table class='table'>
+            <thead class='thread-dark'>
+                <tr class='table-primary'>
+                    <th scope='col'>User</th>
+                    <th scope='col'>Message</th>
+                    <th scope='col'>Timestamp</th>
+                </tr>
+            </thead>
+            <tbody *ngIf='messages'>
+                <tr *ngFor='let message of messages'>
+                    <td>{{ message.Username }}</td>
+                    <td>{{ message.Message }}</td>
+                    <td>{{message.DatePosted | date:'MM/dd/YYYY @ HH:mm:ss'}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class='row'>
+        <h3>Send a Message</h3>
+        <input name="msgText" [(ngModel)]="newMessage.Message" type="text" class="form-control" id="chatMessage" placeholder="Type your message here">
+        <button class='btn btn-success' (click)="sendMessage()">Send</button>
+    </div>
+
+</div>

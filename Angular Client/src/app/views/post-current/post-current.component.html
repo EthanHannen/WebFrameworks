@@ -1,0 +1,31 @@
+<div class='container'>
+    <div class='row'>
+        <div class='card'>
+            <div class='card-body'>
+                <div class='card-img-top'>
+                    <img [src]="post.headerImage"/>
+                </div>
+                <div class="card-title">
+                    <h2>{{post.title}}</h2>
+                    <button class='btn-md btn-danger' 
+                        (click)="DeletePost()" 
+                        *ngIf="currentUser !== null && this.currentUser.UserData.userId === post.userId"
+                    >
+                        Delete
+                    </button>
+                    <button class='btn-md btn-secondary' 
+                        [routerLink]="['/post-edit', post.postId]" 
+                        routerLinkActive="router-link-active" 
+                        *ngIf="currentUser !== null && this.currentUser.UserData.userId === post.userId"
+                    >
+                        Edit
+                    </button>                    
+                </div>
+                <div class='card-text'>
+                    <h4>Posted by {{post.userId}} on {{post.createdDate | date:'MM/dd/yyyy'}}</h4> 
+                    <p>{{post.content}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

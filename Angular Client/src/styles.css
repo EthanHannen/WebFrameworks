@@ -1,0 +1,119 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    background-color: whitesmoke;
+}
+
+.navbar {
+    border:none;
+    border-radius:0px;
+}
+
+.navbar-default {
+    background-color: #001133;
+}
+
+.navbar-default li {
+    background-color:#001133;
+}
+
+.container {
+    max-width:700px;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color:whitesmoke;
+}
+.navbar-default .navbar-nav>li>a:hover {
+    color:#d4d4d4;
+}
+
+.navbar-default .navbar-nav>.active>a {
+    background-color: whitesmoke;
+}
+
+.navbar-default .navbar-nav>.active>a:hover {
+    background-color: whitesmoke;
+}
+
+.navbar-default .navbar-nav>.focus>a {
+    color: whitesmoke;
+}
+
+.card {
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.btn {
+    min-width:75px;
+}
+
+.btn-primary {
+    background-color: #001133;
+    border-color: #000818;
+    margin-right:20px;
+}
+
+.btn-primary:hover {
+    background-color: #00194b;
+    border-color: #000818;
+}
+
+.btn-secondary {
+    background-color: #5c8ef3;
+    border-color: #5685e2;
+    margin-right:20px;
+    color:whitesmoke;
+}
+
+.btn-secondary:hover {
+    background-color: #79a5ff;
+    border-color: #5685e2;
+    color:whitesmoke;
+}
+
+.btn-danger {
+    background-color: #c50000;
+    border-color: #a30101;
+    margin-right:20px;
+}
+
+.btn-danger:hover {
+    background-color: #da0000;
+    border-color: #a30101;
+}
+
+.form-control {
+    max-width:300px;
+    margin-bottom:15px;
+}
+
+.new-post {
+    max-width:700px;
+    margin-bottom:15px;
+}
+
+.card h2 {
+    clear:none;
+    float:left;
+}
+.card button {
+    margin-top: 20px;
+    float:right;
+    border-width:1px;
+}
+
+.card-text {
+    clear:both;
+}
+
+.posts-header button {
+    margin-top:20px;
+    margin-left:27px;
+}
+
+.new-post {
+    margin-left: 0px;
+}
+
+/* Chat containers */

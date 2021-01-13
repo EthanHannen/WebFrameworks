@@ -1,0 +1,14 @@
+<div class='row'>
+    <h3>Edit a Post</h3>
+    <hr>
+    <div *ngIf="message !== ''" class = "alert alert-danger" role = "alert">
+        {{message}}
+    </div>
+    <div class = "form-group" id = 'new-post'>
+        <input name="title" [(ngModel)]="existingPost.title" type="text" class="form-control new-post" id="title">
+        <textarea name="content" [(ngModel)]="existingPost.content" class="form-control new-post" rows="15" cols="50"></textarea>
+        <input name="image" [(ngModel)]="existingPost.headerImage" type="text" class="form-control new-post" id="image">
+        <button class='btn btn-success' (click)="SavePost()">Update</button>
+        <button class='btn btn-danger' [routerLink]="['/home']">Cancel</button>
+    </div>
+</div>
